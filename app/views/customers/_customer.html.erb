@@ -1,9 +1,9 @@
-<div class="column">
+<div class="column is-one-fifth">
     <div class="card">
         <div class="card-content">
             <% if customer.image.present? %>
                 <div class="card-image">
-                    <%= image_tag customer.image.variant(resize_to_limit: [200,200]) %>
+                    <%= image_tag customer.image %>
                 </div>
             <% end %>
             <div class="title">
@@ -12,11 +12,11 @@
         </div>
         <div class="card-footer">
             <p class="card-footer-item">
-                Phone Number - <%= customer.phone_number%>
+                Phone Number <br> <%= customer.phone_number%>
             </p>
             <% if customer.email_address.present? %>
                 <p class="card-footer-item">
-                    Email - <%= customer.email_address%>
+                    Email <br> <%= customer.email_address%>
                 </p>
             <% end %>
         </div>
